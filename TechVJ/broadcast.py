@@ -33,7 +33,7 @@ async def verupikkals(bot, message):
     if not b_msg:
         return await message.reply_text("**Reply This Command To Your Broadcast Message**")
     sts = await message.reply_text(
-        text='Broadcasting your messages...'
+        text='🚀Broadcasting your messages...'
     )
     start_time = time.time()
     total_users = await db.total_users_count()
@@ -57,7 +57,7 @@ async def verupikkals(bot, message):
                     failed += 1
             done += 1
             if not done % 20:
-                await sts.edit(f"Broadcast in progress:\n\nTotal Users {total_users}\nCompleted: {done} / {total_users}\nSuccess: {success}\nBlocked: {blocked}\nDeleted: {deleted}")    
+                await sts.edit(f"Broadcast in progress:\n\n💯Total User : {total_users}\n✅Completed : {done} / {total_users}\n🏹Success: {success}\n🚫Blocked: {blocked}\n🚨Deleted : {deleted}")    
         else:
             # Handle the case where 'id' key is missing in the user dictionary
             done += 1
